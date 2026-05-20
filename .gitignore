@@ -1,0 +1,11 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+.idea/
+/.DS_Store
+/UnfathomableMirage.sln.DotSettings.user
+/UnfathomableMirage/.config/
+/UnfathomableMirage/.vscode/
+/UnfathomableMirage/.DS_Store
