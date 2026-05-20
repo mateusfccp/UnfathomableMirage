@@ -22,10 +22,18 @@ public class MainGame : Game
     {
         _refractionGradientManager = new RefractionGradientManager();
         _graphics = new GraphicsDeviceManager(this);
-        _graphics.GraphicsProfile = GraphicsProfile.HiDef;
-        _graphics.PreferMultiSampling = true;
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+    }
+
+    protected override void Initialize()
+    {
+        Window.AllowUserResizing = true;
+        _graphics.HardwareModeSwitch = true;
+        _graphics.GraphicsProfile = GraphicsProfile.HiDef;
+        _graphics.PreferMultiSampling = true;
+
+        base.Initialize();
     }
 
     protected override void LoadContent()
@@ -63,7 +71,7 @@ public class MainGame : Game
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
-        _spriteBatch.Begin();
+        _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
         var refractionIndexFont = _fontSystem.GetFont(12);
         var layerHeight =
