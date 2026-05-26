@@ -11,8 +11,8 @@
         <ApplicationIcon>Icon.ico</ApplicationIcon>
     </PropertyGroup>
     <ItemGroup>
-        <None Remove="Icon.ico"/>
-        <None Remove="Icon.bmp"/>
+        <None Remove="Icon.ico" />
+        <None Remove="Icon.bmp" />
         <None Update="Content\Fonts\Geneva.ttf">
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
